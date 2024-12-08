@@ -32,15 +32,19 @@ searchInput.addEventListener("input", () => {
 //for favourites
 
 let trigger = 0;
-let fvrtbtn = document.querySelector(".fav-btn");
+let fvrtbtn = document.querySelectorAll(".fav-btn");
 
-fvrtbtn.addEventListener("click", ()=>{
+fvrtbtn.forEach((buttons) => {
+  buttons.addEventListener("click", ()=>{
     if(trigger == 0){
-      fvrtbtn.style.color = "red";
+      buttons.style.color = "red";
       trigger = 1;
     }
     else{
-      fvrtbtn.style.color = "black";
+      buttons.style.color = "black";
       trigger = 0;
     }
-})
+});
+});
+
+
